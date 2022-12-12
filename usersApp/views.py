@@ -1,7 +1,10 @@
-from django.shortcuts import redirect
-from .forms import NewUserForm, LoginForm
-from django.views.generic import CreateView
+from django.shortcuts import redirect, render
+from django.views.generic import CreateView, View
 from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+from .forms import NewUserForm, LoginForm
+from .models import SideVisits
 
 
 class RegisterView(CreateView):
@@ -23,6 +26,19 @@ class LoginUserView(LoginView):
   
 class LogoutUserView(LogoutView):
   next_page = '/'
+
+
+class VisitsView(LoginRequiredMixin, View):
+
+  def get(self, request):
+    visits = SideVisits.objects.all().order_by('-pk')
+    context = {
+      'visits': visits
+    }
+
+    return render(request, 'visits/see_visits.html', context)
+
+
 
 
 
