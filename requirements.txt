@@ -29,3 +29,4 @@ traitlets==5.7.0
 tzdata==2022.7
 urllib3==1.26.13
 wcwidth==0.2.5
+whitenoise==6.2.0
