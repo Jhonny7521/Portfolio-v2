@@ -1,0 +1,114 @@
+{% extends "base.html" %} 
+
+{% block title %}
+<title>Nuevo Projecto</title>
+{% endblock title %}
+
+
+{% block content %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+<header id="header">
+  <div class="d-flex flex-column">
+
+    <div class="profile">
+      <img src="{% static 'img/profile-img.png' %}" alt="" class="img-fluid rounded-circle">
+      
+      <h1 class="text-light"><a href="index.html">{{user.first_name}} {{user.last_name}}</a></h1>
+
+      <div class="social-links mt-3 text-center">
+        {% comment %} <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> {% endcomment %}
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bi bi-github"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+
+    <nav id="navbar" class="nav-menu navbar">
+      <ul>
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Acerca de</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+        {% comment %} <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> {% endcomment %}
+        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
+        <li></li>
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'logout' %}" class="nav-link scrollto"><i class="bi bi-door-closed"></i> <span>Salir</span></a></li>
+        {% else %}
+        <li><a href="{% url 'login' %}" class="nav-link scrollto"><i class="bi bi-door-open"></i> <span>Ingresar</span></a></li>
+        {% endif %}
+      </ul>
+    </nav><!-- .nav-menu -->
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+  <div class="container">
+
+    <div class="d-flex justify-content-between align-items-center">
+      <h2 style="font-weight: 600; color: #173b6c">Eliminar Projecto</h2>
+      <ol>
+        <li>Projectos</li>
+        <li><a href="{% url 'portfolio' %}">Regresar</a></li>
+      </ol>
+    </div>
+
+  </div>
+</section><!-- End Breadcrumbs -->
+
+<section class="inner-page">
+  <div class="container">
+    {% comment %} <div class="mt-5"> {% endcomment %}
+      <div class="card" style="width: 60%; margin: auto">
+        <div class="card-body">
+          <form method="post" novalidate>
+            {% csrf_token %} 
+            <p>Estas seguro de eliminar "{{object.title}} "</p>
+            {{ form|crispy }}
+            <br>
+            <div class="d-grid" style="width: 30%; margin: auto">
+              <button type="submit" class="btn btn-primary">Confirmar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    {% comment %} </div> {% endcomment %}
+  </div>
+</section>
+
+<script>
+  const inputs = document.querySelectorAll("input");
+  
+  inputs.forEach((input) => {
+    input.classList.add("form-control");
+    input.style.marginBottom = "20px";
+  });
+
+  const labels = document.querySelectorAll("label");
+  
+  labels.forEach((label) => {
+    label.style.fontWeight = "600";
+  });
+
+  const textarea = document.getElementById('id_description')
+  textarea.style.marginBottom = "20px";
+  
+  const tasks = document.getElementById('div_id_tasks')
+  tasks.style.marginBottom = "10px";
+
+</script>
+
+</main>
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+{% endblock content %}
+</div>

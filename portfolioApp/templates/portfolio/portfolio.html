@@ -1,0 +1,438 @@
+{% extends "base.html" %} 
+
+{% block title %}
+<title>Portfolio</title>
+{% endblock title %}
+
+
+{% block content %}
+
+{% load static %}
+
+<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <div class="hero-container" data-aos="fade-in">
+    <h1>{{user.first_name}} {{ user.last_name}}</h1>
+    <p>Soy <span class="typed" data-typed-items="Backend Developer, Freelance Developer, Ing. Electrónico"></span></p>
+  </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Acerda de mi</h2>
+        <p>Hola soy Jhonny Quiliche, bachiller en ingeniería Electrónica por pasión y vocación, que durante mis años de estudio he aplicado lo aprendido en concursos de programación, robótica y biomédica. Pertenezco a un grupo de desarrollo e innovación con el que he obtenido el primer lugar en un concurso nacional de innovación social.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <img src="{% static 'img/profile-img.png' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Bach. Ing. Electrónica / Desarrollador Web Backend.</h3>
+          <p class="fst-italic">
+            Durante mi trayectoria profesional he desarrollando aplicaciones de escritorio para medir y concientizar el uso de la energía eléctrica. Actualmente me encuentro enfocado en el desarrollo de aplicaciones web del lado backend. </p>
+          <p class="fst-italic">
+            Si hay algo que resaltar sobre mi es que trabajo de manera directa, creativa y en equipo, involucrándome al 100% en todo lo que hago para conseguir siempre el mejor resultado. Cooperando con todos y apoyando de la mejor manera posible. Con gran sasticfaccion en enseñar y adquirir nuevos conocimientos.
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Idiomas:</strong> <span>Español / Ingles(A2)</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Celular:</strong> <span>+51 985105406</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Dirección:</strong> <span>Puente Piedra, Lima-Perú</span></li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>28</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Nivel:</strong> <span>Junior</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Correo:</strong> <span>jhonny.jql1210@gmail.com</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Section -->
+
+  <!-- ======= Skills Section ======= -->
+  <section id="skills" class="skills section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Skills</h2>
+        <p>En mi formación como desarrollador he tenido la oportunidad de aprender y trabajar con las siguientes tecnologías:</p>
+      </div>
+
+      <div class="row skills-content">
+        <h3>Lenguajes</h3>
+        <div class="col-lg-6" data-aos="fade-up">
+
+          <div class="progress">
+            <span class="skill">Python <i class="val">80%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">JavaScript <i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="progress">
+            <span class="skill">Java <i class="val">50%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Dart<i class="val">30%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row skills-content">
+        <h3>Tecnologías</h3>
+        <div class="col-lg-6" data-aos="fade-up">
+
+          <div class="progress">
+            <span class="skill">Django<i class="val">40%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Flask <i class="val">50%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Spring <i class="val">30%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="progress">
+            <span class="skill">Flutter <i class="val">30%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">HTML / CSS <i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">React <i class="val">30%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row skills-content">
+        <h3>Herramientas</h3>
+        <div class="col-lg-6" data-aos="fade-up">
+
+          <div class="progress">
+            <span class="skill">VS Code<i class="val">70%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Git / GitHub <i class="val">60%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="progress">
+            <span class="skill">Figma <i class="val">60%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="progress">
+            <span class="skill">Illustrator <i class="val">50%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Skills Section -->
+
+  <!-- ======= Resume Section ======= -->
+  <section id="resume" class="resume">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Resume</h2>
+        <p>
+
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-up">
+          
+          <h3 class="resume-title">Educación</h3>
+
+          <div class="resume-item">
+            <h4>Desarrollador Backend</h4>
+            <h5>Octubre 2022 - Febrero 2023</h5>
+            <p><em>Bootcamp Backend del MTPE - Silabuz</em></p>
+            <p>Bootcamp de programación web del MTPE, para desarrollar y fortalecer competencias técnicas en desarrollo web backend con tecnologías como Python, Flask y Django</p>
+          </div>
+
+          <div class="resume-item">
+            <h4>Desarrollador de Aplicaciones Mobile - Flutter</h4>
+            <h5>Agosto 2022 - Setiembre 2022</h5>
+            <p><em>Bootcamp Flutter</em></p>
+            <p>Bootcamp de programación para el desarrollo de aplicaciones movile en Flutter a cargo de la empresa Sílabuz</p>
+          </div>
+
+          <div class="resume-item">
+            <h4>Desarrollador Full Stack</h4>
+            <h5>Febrero 2022 - Mayo 2023</h5>
+            <p><em>Bootcamp de programación web - Coding Dojo</em></p>
+            <p>Bootcamp - Academia de programación para desarrollo de apliaciones web full Stack con tecnologías como Python, Java y MERN</p>
+          </div>
+  
+          <div class="resume-item">
+            <h4>Inglés - Nivel A2</h4>
+            <h5>Febrero 2017 - Marzo 2019</h5>
+            <p><em>Universidad Privada del Norte</em></p>
+            <p>Programa Ingles UPN, con metodología interactiva que permite alcanzar el nivel profesional de inglés requerido por cada carrera para adquirir las habilidades comunicativas necesarias para el desarrollo profesional.</p>
+          </div>
+  
+          <div class="resume-item">
+            <h4>Bach. Ingeniería Electrónica</h4>
+            <h5>Agosto 2015 - Julio 2020</h5>
+            <p><em>Universidad Privada del Norte</em></p>
+            <p>Diseño, desarrollo e implementación de sistemas electrónicos y de telecomunicaciones, manejo de sistemas digitales, control industrial y gestión de redes.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="resume-title">Experiencia Profesional</h3>
+          <div class="resume-item">
+            <h4>Freelance</h4>
+            <h5>Junio 2022 - Setiembre 2022</h5>
+            <p><em>Academia de Matemáticas Online Mathlan - Chile </em></p>
+            <ul>
+              <li>Desarrollo de videojuegos educativos orientados al aprendizaje de las principales operaciones matemáticas para niños. Desarrollando utilizandpo JavaScript, HTML, Adobe Animate e Illustrator</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>Desarrollador Tecnológico</h4>
+            <h5>Setiembre 2020 - Enero 2022</h5>
+            <p><em>JAC Energía y Control S.A.C.</em></p>
+            <ul>
+              <li>Desarrollo  de  herramientas  de  escritorio,  con  las  macros  de  Microsoft Office y VBA</li>
+              <li>Desarrollo  de  aplicaciones  de  escritorio  orientadas  al  análisis  eléctrico industrial.  Desarrolladas  en  .Net  framework  y  con  el  lenguaje  de programación Visual Basic</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>Practicante Pre Profesional</h4>
+            <h5>Marzo 2020 - Agosto 2020</h5>
+            <p><em>JAC Energía y Control S.A.C.</em></p>
+            <ul>
+              <li>Mantenimiento y actualización de ordenadores.</li>
+              <li>Apoyo en diferentes áreas de la empresa con la instalación de programas</li>
+              <li>Actualizaciones de base de datos de productos y clientes de la empresa. Con el motor de base de datos SQL Server.</li>
+              <li>Actualizaciones de la página web de la empresa.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Resume Section -->
+
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <div class="content-title">
+          <h2>Portfolio</h2>
+          {% if request.user.is_authenticated %}
+          <a href="{% url 'add_project' %}" class="btn btn-primary">Agregar projecto</a>
+          {% endif %}
+        </div>
+        <p></p>
+      </div>
+
+      {% comment %} <div class="row" data-aos="fade-up">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-card">Card</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
+        </div>
+      </div> {% endcomment %}
+
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+        {% for project in projects %}
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <div class="card">
+              <div class="card-body">
+                <img src="{{ project.image }}" class="img-fluid" alt="">
+                <h4 style= "margin-top: 20px">{{ project.title }}</h4>
+                <p>{{ project.description }}</p>
+                
+                <div class="d-flex justify-content-center">
+                  {% for task in project.tasks %}
+                  <img src="{{ task.image }}" alt="" style="width: 40px; margin: 0 10px">
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-links">
+              <a href="#" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Más detalle"><i class="bi bi-file-richtext"></i></a>
+              <a href="{{ project.url }}" title="Repositorio en github"><i class="bi bi-github"></i></a>
+              <a href="{{ project.url_deploy }}" title="Ver página"><i class="bi bi-play-btn"></i></a>
+              
+              {% if request.user.is_authenticated %}
+              
+              <a href="{% url 'edit_project' project.id %}" title="Editar projecto"><i class="bi bi-pencil"></i></a>
+              <a href="{% url 'delete_project' project.id %}" title="Eliminar projecto"><i class="bi bi-trash3"></i></a>
+
+              {% endif %}
+              
+            </div>
+          </div>
+        </div>        
+        {% endfor %}
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
+
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contacto</h2>
+        <p></p>
+      </div>
+
+      <div class="row" data-aos="fade-in">
+
+        <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Dirección:</h4>
+              <p>Puente Piedra, Lima - Perú</p>
+            </div>
+
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Correo:</h4>
+              <p>jhonny.jql1210@gmail.com</p>
+            </div>
+
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4>Telefono:</h4>
+              <p>+51 985105406</p>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+          </div>
+
+        </div>
+
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">Tu nombre</label>
+                <input type="text" name="name" class="form-control" id="name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Tu correo</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Asunto</label>
+              <input type="text" class="form-control" name="subject" id="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Mensaje</label>
+              <textarea class="form-control" name="message" rows="10" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Enviando</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Tu mensaje ha sido enviado. Gracias.</div>
+            </div>
+            <div class="text-center"><button type="submit">Enviar mensaje</button></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+{% endblock content %}
+</div>
