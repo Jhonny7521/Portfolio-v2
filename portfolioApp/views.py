@@ -13,7 +13,7 @@ from .forms import ProjectForm
 def portfolioView(request):
 
   if not request.user.is_authenticated :
-    user = User.objects.get(pk = 2)
+    user = User.objects.get(pk = 1)
   else:
     user = request.user
 
