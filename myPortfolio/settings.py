@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u8mmec2%g(gv2u7ymrc57ba*+3)y8*g#^77!#zlfp&8#c+@ua0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'portfolioApp.apps.PortfolioappConfig',
     'crispy_forms',
 ]
+
+CSRF_TRUSTED_ORIGINS = ['https://template-django-production-6e65.up.railway.app']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
