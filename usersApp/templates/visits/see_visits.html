@@ -34,9 +34,9 @@
           <div class="card-body">
 
             <table class="table">
-              <thead>
+              <thead class="table-info">
                 <tr>
-                  <th scope="col">Num. Visita</th>
+                  <th scope="col"># Visita</th>
                   <th scope="col">Dirección IP</th>
                   <th scope="col">Ciudad</th>
                   <th scope="col">País</th>
@@ -47,7 +47,7 @@
               <tbody>
                 {% for visit in visits %}
                 <tr>
-                  <td>{{ visit.id }}</td>
+                  <th scope="row">{{ visit.id }}</th>
                   <td>{{ visit.ip_address }}</td>
                   <td>{{ visit.city }}</td>
                   <td>{{ visit.country }}</td>
