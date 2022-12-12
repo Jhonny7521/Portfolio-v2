@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-u8mmec2%g(gv2u7ymrc57ba*+3)y8*g#^77!#zlfp&8#c+@ua0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'crispy_forms',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://template-django-production-6e65.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://portfolio-v2-production-c48c.up.railway.app']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
