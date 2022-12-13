@@ -1,9 +1,3 @@
-PORTAFOLIO V2
-
-Para ver las funcionalidades del proyecto para usuarios logueados es necesario utilizar las siguientes credenciales: 
-
-
-
 # PORTFOLIO V2
 ## DESCRIPCIÓN
 
